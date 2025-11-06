@@ -338,19 +338,19 @@ def timeit_comparison():
     with console.status("[bold green]Running timeit benchmarks..."):
         time_recursive = timeit.timeit(
             f"fibonacci_recursive({n})",
-            setup="from __main__ import fibonacci_recursive",
+            setup="from profiler_demo import fibonacci_recursive",
             number=iterations
         )
         
         time_iterative = timeit.timeit(
             f"fibonacci_iterative({n})",
-            setup="from __main__ import fibonacci_iterative",
+            setup="from profiler_demo import fibonacci_iterative",
             number=iterations
         )
         
         time_matrix = timeit.timeit(
             "matrix_multiplication(30)",
-            setup="from __main__ import matrix_multiplication",
+            setup="from profiler_demo import matrix_multiplication",
             number=10
         )
     
