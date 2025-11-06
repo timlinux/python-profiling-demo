@@ -8,7 +8,6 @@ using various Python profiling tools including cProfile, timeit, valgrind, and s
 
 import cProfile
 import pstats
-import time
 import timeit
 from io import StringIO
 from typing import List
@@ -306,7 +305,7 @@ def generate_profile_data():
 # This script is optimized for valgrind profiling
 import sys
 sys.path.insert(0, '.')
-from profiler_demo import *
+from profiler_demo import fibonacci_recursive, matrix_multiplication, prime_factorization
 
 # Run a subset of operations for valgrind
 fibonacci_recursive(25)
